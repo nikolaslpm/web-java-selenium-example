@@ -5,15 +5,17 @@ plugins {
 group 'com.demoaut.newtours'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = JavaVersion.VERSION_11
-
 repositories {
     mavenCentral()
 }
 
+targetCompatibility = JavaVersion.VERSION_11
+sourceCompatibility = JavaVersion.VERSION_11
+
 dependencies {
     implementation 'org.seleniumhq.selenium:selenium-java:3.141.+'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.+'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.+'
 }
 
 test {
