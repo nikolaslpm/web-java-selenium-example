@@ -1,23 +1,19 @@
-plugins {
-    id 'java'
-}
+configure(subprojects.findAll { it.name == "selenium-ui" ||
+            it.name == "selenium-junit" ||
+            it.name == "selenium-cucumber"
+}) {
 
-group 'com.demoaut.newtours'
-version '1.0-SNAPSHOT'
+    apply plugin: 'java'
 
-repositories {
-    mavenCentral()
-}
+    group 'com.demoaut.newtours'
+    version '1.0-SNAPSHOT'
 
-targetCompatibility = JavaVersion.VERSION_11
-sourceCompatibility = JavaVersion.VERSION_11
+    java {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
 
-dependencies {
-    implementation 'org.seleniumhq.selenium:selenium-java:3.141.+'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.+'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.+'
-}
-
-test {
-    useJUnitPlatform()
+    repositories {
+        mavenCentral()
+    }
 }

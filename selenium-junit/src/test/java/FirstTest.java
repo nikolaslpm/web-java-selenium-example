@@ -7,7 +7,7 @@ public class FirstTest {
 
     @BeforeEach
     void setUp() {
-        System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "../selenium-ui/src/main/resources/chromedriver");
         driver = new ChromeDriver();
     }
 

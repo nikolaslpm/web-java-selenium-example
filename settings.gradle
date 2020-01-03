@@ -8,3 +8,7 @@
  */
 
 rootProject.name = 'web-java-selenium-example'
+
+include 'selenium-ui'
+include 'selenium-cucumber'
+include 'selenium-junit'

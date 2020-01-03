@@ -1,0 +1,4 @@
+dependencies {
+    // Selenium for Java
+    implementation 'org.seleniumhq.selenium:selenium-java:3.141.+'
+}

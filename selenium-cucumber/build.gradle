@@ -1,0 +1,24 @@
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+dependencies {
+    compile project(':selenium-ui')
+
+    // Cucumber uses Junit4
+    testImplementation 'io.cucumber:cucumber-java:4.7.+'
+    testImplementation 'io.cucumber:cucumber-junit:4.7.+'
+}
+
+task cucumber() {
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty', '--glue', 'gradle.cucumber', 'src/test/resources']
+        }
+    }
+}

@@ -1,0 +1,14 @@
+dependencies {
+    compile project(':selenium-ui')
+
+    // Selenium for Java
+    implementation 'org.seleniumhq.selenium:selenium-java:3.141.+'
+
+    // Junit 5
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.+'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.+'
+}
+
+test {
+    useJUnitPlatform()
+}
