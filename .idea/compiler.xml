@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="demoaut.main" target="1.8" />
+      <module name="demoaut.test" target="1.8" />
+      <module name="web-java-selenium-sample.main" target="11" />
+      <module name="web-java-selenium-sample.test" target="11" />
+      <module name="webdemoaut.main" target="11" />
+      <module name="webdemoaut.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

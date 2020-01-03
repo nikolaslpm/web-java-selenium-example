@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.demoaut.newtours'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:3.141.+'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.+'
+}
+
+test {
+    useJUnitPlatform()
+}
